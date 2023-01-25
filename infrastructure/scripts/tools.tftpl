@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# setup tool server
+apt-get update && apt-get upgrade -y
+
+%{ for p in apt ~}
+apt-get install -y ${p}
+%{ endfor ~}
+
